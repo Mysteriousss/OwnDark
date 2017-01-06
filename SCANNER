@@ -1,0 +1,32 @@
+import nmap
+#Autor:Nando
+#Data:05/01/2017
+#OBJETIVO: FAZER COM QUE O PESSOAL DO GRUPO COMECE A DESENVOLVER NOVOS SCRIPTS
+#E DEMONSTRAR ALGUMAS BIBLIOTECAS BASICAS DO PYTHON
+#
+
+n = nmap.PortScanner()
+print("""
+ ____   ____    _    _   _ _   _ _____ ____  
+/ ___| / ___|  / \  | \ | | \ | | ____|  _ \ 
+\___ \| |     / _ \ |  \| |  \| |  _| | |_) |
+ ___) | |___ / ___ \| |\  | |\  | |___|  _ < 
+|____/ \____/_/   \_\_| \_|_| \_|_____|_| \_\
+                                             
+""")
+print("")
+alvo = raw_input("IP DO ALVO: ")
+porta = raw_input("PORTAS A SCAN: ")
+n.scan(alvo, porta)
+
+for host in n.all_hosts():
+    print("///////////////////")
+    print("Host: %s %s"%(host, n[host].hostname()))
+    print("Status: %s"%n[host].state())
+    for proto in n[host].all_protocols():
+        print("///////////")
+        print("Protocolo: %s"%proto)
+        lport = n[host][proto].keys()
+        lport.sort()
+        for port in lport:
+            print("Porta: %s Status: %s"%(port, n[host][proto][port]['state']))
