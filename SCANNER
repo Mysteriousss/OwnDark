@@ -24,7 +24,7 @@ for host in n.all_hosts():
     print("Host: %s %s"%(host, n[host].hostname()))
     print("Status: %s"%n[host].state())
     for proto in n[host].all_protocols():
-        print("///////////")
+        print("///////////////////")
         print("Protocolo: %s"%proto)
         lport = n[host][proto].keys()
         lport.sort()
