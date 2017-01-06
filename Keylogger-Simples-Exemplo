@@ -1,6 +1,5 @@
 //Keylogger codado em C++ so para uso de estudo e exemplos
 //AVISO:A possiveis erros de compilaçao
-//Autor:Nando
 //Data:10-08/2011
 #include <windows.h>
 #include <iostream>         
