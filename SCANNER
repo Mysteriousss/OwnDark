@@ -1,6 +1,7 @@
 import nmap
 #Autor:Nando
 #Data:05/01/2017
+#!!! OBS:Antes de executar o script de um "apt-get install python-nmap" !!!
 #OBJETIVO: FAZER COM QUE O PESSOAL DO GRUPO COMECE A DESENVOLVER NOVOS SCRIPTS
 #E DEMONSTRAR ALGUMAS BIBLIOTECAS BASICAS DO PYTHON
 #
